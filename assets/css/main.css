@@ -1,0 +1,26 @@
+main{
+    background-color: rgb(224, 223, 223);
+}
+
+main input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+#inputTask{
+    width: 80%;
+}
+
+.bi.bi-trash{
+    font-size: 30px;
+}
+
+.bi.bi-trash:hover{
+    cursor: pointer;
+}
+
+/* 
+.contenedorAgregar button{
+    width: 20%;
+    height: 35px;
+} */
