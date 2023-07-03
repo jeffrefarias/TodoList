@@ -1,5 +1,25 @@
-let cont = 1;
-const Task = [];
+// const Task = [];
+
+const Task = [
+    {
+      id: 1,
+      tarea: "Hacer la cama"
+    },
+    {
+      id: 2,
+      tarea: "Ducharme"
+    },
+    {
+        id: 3,
+        tarea: "Tomar desayuno"
+    }
+  ];
+
+let cont = Task.length +1;
+
+document.addEventListener("DOMContentLoaded", function(){
+    mostrarListaTarea(Task);
+});
 
 function mostrarListaTarea(Task){
 
@@ -32,11 +52,18 @@ function DeleteTask(id){
 
 function AgregarTarea(){
     const inputTarea = document.querySelector("#inputTask").value;
-    newTask = {id: cont, tarea: inputTarea}
-    Task.push(newTask);
-    cont++;
+
+    if(inputTarea === ''){
+        alert("No se pueden agregar tareas vacías.");
+    }else{
+        newTask = {id: cont, tarea: inputTarea}
+        Task.push(newTask);
+        cont++;
     
-    mostrarListaTarea(Task);
+      mostrarListaTarea(Task);
+    }
+
+    
 }
 
 let contOk = 0;
